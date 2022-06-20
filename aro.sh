@@ -207,7 +207,7 @@ if [ 1 -eq 1 ]
 then
 xpnam --delta="
 &NAMDIM
-  NPROMA=-4,
+  NPROMA=-4096,
 /
 " --inplace fort.4
 fi
