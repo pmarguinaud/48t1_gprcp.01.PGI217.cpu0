@@ -6,11 +6,19 @@ set -e
 cd fypp
 
 
-b=gprcp_ydvars
+for f in *.fypp
+do
 
-/opt/softs/anaconda3/bin/fypp -m os -M . -m yaml -m field_config ./$b.fypp  > $b.F90
+b=$(basename $f .fypp)
 
+/opt/softs/anaconda3/bin/fypp -m os -M . -m yaml -m field_config ./$b.fypp  $b.F90
+
+if [ $b = gprcp_ydvars ]
+then
 d=adiab
+else
+d=module
+fi
 
 if [ ! -f ../src/local/arpifs/$d/$b.F90 ]
 then
@@ -26,3 +34,4 @@ else
   fi
 fi
 
+done
