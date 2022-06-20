@@ -227,8 +227,8 @@ pack=/home/gmap/mrpm/marguina/pack/48t1_gprcp.01.PGI217.cpu0
 
 ls -lrt
 
-diffNODE.001_01 NODE.001_01 $PACK/ref/NODE.001_01.$NAM1.$NAM2
-cp NODE.001_01 $pack/ref/NODE.001_01.$NAM1.$NAM2
+diffNODE.001_01 NODE.001_01 $pack/ref/NODE.001_01.$NAM1.$NAM2
+#cp NODE.001_01 $pack/ref/NODE.001_01.$NAM1.$NAM2
 
 cd ..
 
